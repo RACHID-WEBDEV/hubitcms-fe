@@ -1,0 +1,12 @@
+.nav-container{
+    display: flex;
+    width: 60vw;
+    height: auto;
+    justify-content: space-around;
+
+}
+.link-item{
+    color:black;
+    text-decoration: none;
+
+}
