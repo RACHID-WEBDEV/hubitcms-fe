@@ -20,11 +20,11 @@ const App = () => {
     <Router>
                
       <Switch>
-         <Route exact path="/" component={LandingPage} />
+         <Route exact path="/landing" component={LandingPage} />
     
         
       
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Login} />
         <Route exact path="/dashboard" component={Dashboard} />
      
       <Route exact path="*"  component={PageError} />

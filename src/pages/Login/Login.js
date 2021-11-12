@@ -7,6 +7,7 @@ import LoginPasswordInput from '../../components/Inputs/LoginPasswordInput'
 import { userLogin } from '../../services/PostService'
 import { useHistory } from 'react-router-dom'
 import appContext from '../../contexts/app-context'
+import hubitlogo from '../../assets/hubitlogo.png' ;
 
 const Login = () => {
 
@@ -20,10 +21,8 @@ const Login = () => {
 const handleLogin = async (e) => {  //login function    
     e.preventDefault();
     const {email,password} = loginValues;   //get values from context
-    console.log(email,password);
     const item = {"email":email,"password":password};
     const response = await userLogin(item); 
-    
     if(response.data.error === false){
         localStorage.setItem('token',response.data.response);
         history.push('/dashboard'); //redirect to dashboard page if login is successful 
@@ -36,17 +35,21 @@ const handleLogin = async (e) => {  //login function
 return (
         <>
             <div className={classes.container}>
+                <img src={hubitlogo} alt="hubut logo" className={classes.logoImg} />
                 <div className={classes.loginContainer}>
                     <div className={classes.loginForm}>
                         <Typography variant="h4" className={classes.loginTitle}>
-                            Login 
+                            Welcome Back
+                        </Typography>
+                        <Typography variant="body1" className={classes.subtitle}>
+                        Please Log in to your account to continue
                         </Typography>
 
-             <LoginInput placeholder="Email" name="email" label="" type="email" ErrorMessage="" />
+             <LoginInput placeholder="Email" name="email" label="" type="email" ErrorMessage="" className={classes.email} />
              <LoginPasswordInput placeholder="Password" name="password"  />
              </div>
                 <div className={classes.loginButton}>
-                    <Button variant="contained" color="primary" onClick={handleLogin}>
+                    <Button variant="contained" color="primary" onClick={handleLogin} className={classes.loginBtn}>
                         Login
                     </Button>
                     </div>
