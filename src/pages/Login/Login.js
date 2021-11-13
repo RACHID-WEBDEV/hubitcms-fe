@@ -12,7 +12,6 @@ import hubitlogo from '../../assets/hubitlogo.png' ;
 const Login = () => {
 
     const {loginValues,setLogin} = useContext(appContext);
-    const classes = useStyles();
     const history = useHistory();
 
     useEffect(() => {
@@ -29,12 +28,14 @@ const handleLogin = async (e) => {  //login function
     } else { 
         alert('Invalid email or password');
     }   //if login is unsuccessful, alert user with error message 
+
 }       
+const classes = useStyles();
 
     
 return (
         <>
-            <div className={classes.container}>
+            <div className={classes.root}>
                 <img src={hubitlogo} alt="hubut logo" className={classes.logoImg} />
                 <div className={classes.loginContainer}>
                     <div className={classes.loginForm}>
@@ -44,14 +45,24 @@ return (
                         <Typography variant="body1" className={classes.subtitle}>
                         Please Log in to your account to continue
                         </Typography>
+                <div className={classes.formItem}>
 
              <LoginInput placeholder="Email" name="email" label="" type="email" ErrorMessage="" className={classes.email} />
+                </div>
+                <div>
+
              <LoginPasswordInput placeholder="Password" name="password"  />
              </div>
+                </div>
                 <div className={classes.loginButton}>
-                    <Button variant="contained" color="primary" onClick={handleLogin} className={classes.loginBtn}>
+                    <Button   onClick={handleLogin} className={classes.btned}>
                         Login
                     </Button>
+                    </div>
+                    <div className={classes.termsContainer}>
+                        By continuing you agree to our  <Typography className={classes.terms} component={Link} to="/terms">
+                            Terms and Condition
+                        </Typography>
                     </div>
              </div>
         </div>
