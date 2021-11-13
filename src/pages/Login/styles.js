@@ -20,11 +20,25 @@ root:{
      [theme.breakpoints.down('sm')]:{
           height:'auto',
           minHeight:'100vh',
+          overflowX:'hidden',
 
     },
 
    
 },
+margin: {
+    margin: theme.spacing(1),
+    width:'100%',
+  },
+  icon:{
+    color: '#005FC0',
+    fontSize:'1.5rem',
+
+  },
+  input:{
+      width:'100%',
+      marginBottom:'2rem'
+  },
 
 
 loginContainer : {
@@ -49,7 +63,7 @@ loginForm:{
     flexDirection:'column',
     [theme.breakpoints.down('sm')]:{
           width:'100%',
-          padding:'1rem 2rem'
+          padding:'1rem'
           
     },
 },
@@ -97,12 +111,13 @@ alignItems:'center',
 color:'#474747',
 marginTop:'1rem',
 [theme.breakpoints.down('sm')]:{
-    FontSize:'0.9rem !important',
+    fontSize:'0.9rem !important',
 }
 },
 terms:{
     textDecoration:'none',
     color:'#122fc0',
+    
     '&:hover':{
         color:'#122fc0',
 

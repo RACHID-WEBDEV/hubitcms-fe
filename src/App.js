@@ -11,6 +11,7 @@ import AppState from './contexts/AppState';
 import PageError from './pages/Error/PageError';
 import LandingPage from './pages/LandingPage/LandingPage';
 import Dashboard from './pages/DashboardPage/Dashboard';
+import NewLogin from './pages/Login/NewLogin';
 
 
 const App = () => {
@@ -21,17 +22,18 @@ const App = () => {
                
       <Switch>
          <Route exact path="/landing" component={LandingPage} />
+         <Route exact path="/" component={NewLogin} />
     
         
       
-        <Route exact path="/" component={Login} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/dashboard" component={Dashboard} />
      
       <Route exact path="*"  component={PageError} />
       
       </Switch>
       </Router>
-    // </AppState>
+    </AppState>
   )
 }
 
