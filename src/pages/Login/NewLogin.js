@@ -53,16 +53,19 @@ return (
                 <img src={hubitlogo} alt="hubut logo" className={classes.logoImg} />
                 <div className={classes.loginContainer}>
                     <div className={classes.loginForm}>
-                        <Typography variant="h4" className={classes.loginTitle}>
-                            Welcome Back
-                        </Typography>
-                        <Typography variant="body1" className={classes.subtitle}>
-                        Please Log in to your account to continue
-                        </Typography>
+                        <p className={classes.loginTitle}> 
+                Welcome back
+                        </p>
+                            
+                        
+                    <p className={classes.lText}> 
+                    Please Log in to your account to continue
+                      </p>
                 <div className={classes.formItem}>
 
                 <FormControl className={classes.margin}>
-        {/* <InputLabel htmlFor="input-with-icon-adornment">With a start adornment</InputLabel> */}
+
+
         <Input
           id="input-with-icon-adornment"
           className={classes.input}
@@ -83,7 +86,7 @@ return (
       </FormControl>
 
                 <FormControl className={classes.margin}>
-        {/* <InputLabel htmlFor="input-with-icon-adornment">With a start adornment</InputLabel> */}
+        
         <Input
           id="input-with-icon-adornment"
           className={classes.input}
@@ -104,14 +107,18 @@ return (
         />
       </FormControl>
                 </div>
-                {/* <div>
+                </div>
+                
+                <div className={classes.checkContainer}>
+                  <input type="checkbox" className={classes.checkItem} />
+                  <p>
+                Remember me
 
-             <LoginPasswordInput placeholder="Password" name="password"  />
-             </div> */}
+                  </p>
                 </div>
                 <div className={classes.loginButton}>
                     <Button   onClick={handleLogin} className={classes.btned}>
-                        Login
+                        Log in
                     </Button>
                     </div>
                     <div className={classes.termsContainer}>
@@ -119,6 +126,12 @@ return (
                             Terms and Condition
                         </Typography>
                     </div>
+                    <div className={classes.fpContainer}>
+                    <Link to="/forgetpassword" className={classes.fPass}>
+                  Forgot password?
+                    </Link>
+                    </div>
+                 
              </div>
         </div>
         </>

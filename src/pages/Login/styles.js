@@ -12,7 +12,7 @@ root:{
     display:'flex',
     flexDirection:'column',
     justifyContent:'center',
-    fontFamily:'Montserrat, sans-serif',
+    fontFamily:'Montserrat, sans-serif !important',
     alignItems:'center',
      backgroundColor:' rgba(0, 126, 255, 0.025)',
      overflowY:'hidden',
@@ -37,7 +37,8 @@ margin: {
   },
   input:{
       width:'100%',
-      marginBottom:'2rem'
+      marginTop:'1rem',
+      fontFamily:'Montserrat, sans-serif',
   },
 
 
@@ -75,7 +76,7 @@ email:{
 
 subtitle:{
     textAlign:'center !important',
-    marginBottom:'2rem !important',
+    marginBottom:'1rem !important',
     fontFamily:'Montserrat, sans-serif !importtant',
 },
 
@@ -84,11 +85,12 @@ loginTitle:{
     marginBottom:'1rem !important',
     fontFamily:'Montserrat, sans-serif !important ',
     fontWeight:'600',
+    fontSize:'20px',
 },
 
 btned:{
     backgroundColor:'#005FC0 !important' ,
-    padding:'0.6rem 5rem !important',
+    padding:'0.6rem 6rem !important',
     margin:'auto !important',
     display:'block !important',
     color:'#fff !important',
@@ -108,8 +110,9 @@ flexDirection:'row',
 textAlign:'center',
 justifyContent:'center',
 alignItems:'center',
-color:'#474747',
+color:'#000000',
 marginTop:'1rem',
+fontSize:'11px',
 [theme.breakpoints.down('sm')]:{
     fontSize:'0.9rem !important',
 }
@@ -117,6 +120,8 @@ marginTop:'1rem',
 terms:{
     textDecoration:'none',
     color:'#122fc0',
+fontSize:'11px',
+
     
     '&:hover':{
         color:'#122fc0',
@@ -129,7 +134,9 @@ logoImg:{
         width:'30%',
         height:'auto',
 
-    }
+    },
+    width:'143px',
+    height:'auto',
 },
 formItem:{
     [theme.breakpoints.down('sm')]:{
@@ -137,9 +144,46 @@ formItem:{
         display:'grid',
         placeItems:'center',
     }
+},
+lText:{
+    fontFamily: 'Montserrat',
+fontStyle: 'normal',
+fontWeight: 'normal',
+fontSize: '13px',
+lineHeight: '16px',
+textAlign:'center',
+marginBottom:'2rem',
+
+color: 'rgba(0, 0, 0, 0.5)',
+},
+
+checkContainer:{
+    display:'flex',
+    marginTop:'1rem',
+    [theme.breakpoints.down('sm')] :{
+        marginLeft:'1.5rem',
+    }
+},
+checkItem:{
+    marginRight:[theme.spacing(1)],
+    color:'#122fc0', 
+    height:'16px',
+    width:'16px',
+    alignItems:'center'
+},
+
+fPass:{
+color:'#007EFF',
+fontFamily: 'Montserrat',
+fontSize:'13px',
+marginTop:'2rem',
+textDecoration:'none',
+
+},
+fpContainer:{
+    display:'flex',
+    justifyContent:'center',
 }
-
-
 
 
 
