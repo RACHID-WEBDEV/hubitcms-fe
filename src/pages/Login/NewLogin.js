@@ -122,9 +122,9 @@ return (
                     </Button>
                     </div>
                     <div className={classes.termsContainer}>
-                        By continuing you agree to our  <Typography className={classes.terms} component={Link} to="/terms">
+                        By continuing you agree to our  <Link className={classes.terms}  to="terms">
                             Terms and Condition
-                        </Typography>
+                        </Link>
                     </div>
                     <div className={classes.fpContainer}>
                     <Link to="/forgetpassword" className={classes.fPass}>

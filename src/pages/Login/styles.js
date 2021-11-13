@@ -114,7 +114,7 @@ color:'#000000',
 marginTop:'1rem',
 fontSize:'11px',
 [theme.breakpoints.down('sm')]:{
-    fontSize:'0.9rem !important',
+    fontSize:'0.6rem !important',
 }
 },
 terms:{
