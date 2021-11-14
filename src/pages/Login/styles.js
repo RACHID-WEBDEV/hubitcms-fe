@@ -14,8 +14,9 @@ root:{
     justifyContent:'center',
     fontFamily:'Montserrat, sans-serif !important',
     alignItems:'center',
-     backgroundColor:' rgba(0, 126, 255, 0.025)',
+    //  backgroundColor:' rgba(0, 126, 255, 0.025)',
      overflowY:'hidden',
+    
     
      [theme.breakpoints.down('sm')]:{
           height:'auto',
@@ -45,18 +46,16 @@ margin: {
 loginContainer : {
     background: 'rgba(196, 196, 196, 0.1)',
 boxShadow: '0px 2px 12px rgba(0, 0, 0, 0.15)',
-    width:'45%',
+    width:'40%',
     height:'auto',
     [theme.breakpoints.down('sm')]:{
       width:'100%',
       height:'auto',
       background:'transparent',
       boxShadow:'none',
-
     },
     padding:'3rem',
     marginTop:'2rem !important',
-
 },
 
 loginForm:{
@@ -71,7 +70,6 @@ loginForm:{
 
 email:{
     width:'100%',
-    
 },
 
 subtitle:{
@@ -82,7 +80,7 @@ subtitle:{
 
 loginTitle:{
     textAlign:'center !important',
-    marginBottom:'1rem !important',
+    marginBottom:'0.8rem !important',
     fontFamily:'Montserrat, sans-serif !important ',
     fontWeight:'600',
     fontSize:'20px',
@@ -148,11 +146,11 @@ formItem:{
 lText:{
     fontFamily: 'Montserrat',
 fontStyle: 'normal',
-fontWeight: 'normal',
+fontWeight: '100',
 fontSize: '13px',
 lineHeight: '16px',
 textAlign:'center',
-marginBottom:'2rem',
+marginBottom:'1.7rem',
 
 color: 'rgba(0, 0, 0, 0.5)',
 },

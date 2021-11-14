@@ -49,10 +49,13 @@ const classes = useStyles();
     
 return (
         <>
+        <div className="desktop">
+
+        
             <div className={classes.root}>
                 <img src={hubitlogo} alt="hubut logo" className={classes.logoImg} />
                 <div className={classes.loginContainer}>
-                    <div className={classes.loginForm}>
+                     <div className={classes.loginForm}>
                         <p className={classes.loginTitle}> 
                 Welcome back
                         </p>
@@ -107,32 +110,33 @@ return (
         />
       </FormControl>
                 </div>
-                </div>
+                </div> 
                 
-                <div className={classes.checkContainer}>
+                 <div className={classes.checkContainer}>
                   <input type="checkbox" className={classes.checkItem} />
                   <p>
                 Remember me
 
                   </p>
-                </div>
-                <div className={classes.loginButton}>
+                </div> 
+                 <div className={classes.loginButton}>
                     <Button   onClick={handleLogin} className={classes.btned}>
                         Log in
                     </Button>
-                    </div>
-                    <div className={classes.termsContainer}>
+                    </div> 
+                     <div className={classes.termsContainer}>
                         By continuing you agree to our  <Link className={classes.terms}  to="terms">
                             Terms and Condition
                         </Link>
-                    </div>
-                    <div className={classes.fpContainer}>
+                    </div> 
+                   <div className={classes.fpContainer}>
                     <Link to="/forgetpassword" className={classes.fPass}>
                   Forgot password?
                     </Link>
-                    </div>
+                    </div> 
                  
              </div>
+        </div>
         </div>
         </>
     )

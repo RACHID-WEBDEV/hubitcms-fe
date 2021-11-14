@@ -6,3 +6,11 @@ body{
 font-family: 'Rubik', sans-serif;
 font-family: 'Ubuntu', sans-serif; */
 }
+
+.desktop{
+    background-image: url('./assets/dbackground.png');
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
