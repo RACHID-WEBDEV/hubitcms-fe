@@ -15,10 +15,9 @@ font-family: 'Ubuntu', sans-serif; */
     background-size: cover;
 }
 
-.iconsize{
+.icon{
     color: #005FC0;
-    font-size: 16px;
-    width: 50px;
-    background-color: red;
-    height: 20px;
+    font-size: 1.5rem;
+    margin-right: 0.8rem;
+    margin-top: 1.5rem;
 }

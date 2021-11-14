@@ -14,7 +14,7 @@ import Grid from '@material-ui/core/Grid';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { useHistory } from 'react-router-dom'
 import appContext from '../../contexts/app-context'
-import hubitlogo from '../../assets/hubitlogo.png' ;
+import hubitlogo from '../../assets/hubit.png' ;
 import {FiUser} from 'react-icons/fi'
 import {IoMdCheckmark} from 'react-icons/io'
 import {MdVisibilityOff} from 'react-icons/md';
@@ -56,7 +56,7 @@ return (
             <div className={classes.root}>
                 <img src={hubitlogo} alt="hubut logo" className={classes.logoImg} />
                 <div className={classes.loginContainer}>
-                     {/* <div className={classes.loginForm}>
+                     <div className={classes.loginForm}>
                         <p className={classes.loginTitle}> 
                 Welcome back
                         </p>
@@ -66,21 +66,24 @@ return (
                     Please Log in to your account to continue
                       </p>
                 <div className={classes.formItem}>
+                <div className={classes.margin}>
+                <i className="far fa-user icon"></i> 
 
-                <FormControl className={classes.margin}>
-
+                <FormControl className={classes.mar}>
+                  
+                
 
         <Input
           id="input-with-icon-adornment"
           className={classes.input}
           placeholder="Email"
-          startAdornment={
-            <InputAdornment position="start">
+          // startAdornment={
+          //   <InputAdornment position="start">
               
-              <i className="far fa-user"></i> 
+          //     <i className="far fa-user"></i> 
 
-            </InputAdornment>
-          }
+          //   </InputAdornment>
+          // }
           endAdornment={
             <InputAdornment position="end">
             
@@ -89,21 +92,20 @@ return (
             </InputAdornment>
           }
         />
-      </FormControl>
 
-                <FormControl className={classes.margin}>
+      </FormControl>
+      </div>
+            <div className={classes.margi}>
+            <KeyIcon className="icon" />
+
+                <FormControl className={classes.mar}>
         
         <Input
           id="input-with-icon-adornment"
           className={classes.input}
           type="password"
           placeholder="Password"
-          startAdornment={
-            <InputAdornment position="start">
-              <KeyIcon className={classes.icon} />
-          
-            </InputAdornment>
-          }
+     
           endAdornment={
             <InputAdornment position="end">
             
@@ -113,6 +115,8 @@ return (
           }
         />
       </FormControl>
+      </div>
+
                 </div>
                 </div> 
                 
@@ -137,7 +141,7 @@ return (
                     <Link to="/forgetpassword" className={classes.fPass}>
                   Forgot password?
                     </Link>
-                    </div>  */}
+                    </div> 
                  
              </div>
         </div>

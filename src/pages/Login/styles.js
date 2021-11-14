@@ -7,8 +7,8 @@ export default makeStyles((theme) => ({
   
 
 root:{
-    width:'1440px',
-    height:'1024px',
+    width:'100vw',
+    height:'100vh',
     display:'flex',
     flexDirection:'column',
     justifyContent:'center',
@@ -28,45 +28,57 @@ root:{
    
 },
 margin: {
-    margin: theme.spacing(1),
+    
     width:'100%',
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    marginBottom:'3.43rem !important',
+
+  },
+  margi:{
+    width:'100%',
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
   },
   icon:{
     color: '#005FC0',
     fontSize:'1.5rem',
-
   },
   input:{
       width:'100%',
       marginTop:'1rem',
       fontFamily:'Montserrat, sans-serif',
   },
+  mar:{
+width:'100%',
+height:'inherit'
+  },
 
 
 loginContainer : {
     background: 'rgba(196, 196, 196, 0.1)',
 boxShadow: '0px 2px 12px rgba(0, 0, 0, 0.15)',
-    width:'665px',
-    height:'501px',
+    width:'46.8%',
+    // height:'48.92%',
+    height:'auto',
     [theme.breakpoints.down('sm')]:{
       width:'100%',
       height:'auto',
       background:'transparent',
       boxShadow:'none',
     },
-    padding:'3rem',
+    // padding:'3rem',
     // marginTop:'2rem !important',
-    top:'233px',
-    left:'388px',
-    right:'388px',
-    bottom:'290px',
-    position:'absolute'
+    
 
 },
 
 loginForm:{
     display:'flex',
     flexDirection:'column',
+    alignItems:'center',
     [theme.breakpoints.down('sm')]:{
           width:'100%',
           padding:'1rem'
@@ -86,20 +98,26 @@ subtitle:{
 
 loginTitle:{
     textAlign:'center !important',
-    marginBottom:'0.8rem !important',
+    marginBottom:'0.43rem !important',
     fontFamily:'Montserrat, sans-serif !important ',
     fontWeight:'600',
     fontSize:'20px',
+    marginTop:'2.25rem',
 },
 
 btned:{
     backgroundColor:'#005FC0 !important' ,
-    padding:'0.6rem 6rem !important',
-    margin:'auto !important',
+    // padding:'0.6rem 6rem !important',
+    // margin:'auto !important',
+    marginTop:'2.56rem !important',
     display:'block !important',
     color:'#fff !important',
     fontFamily:'Montserrat, sans-serif',
-    marginTop:'2rem !important',
+    width:'15.5rem !important',
+    marginBottom:'0.75rem !important',
+
+
+    // marginTop:'2rem !important',
     '&:hover':{
         backgroundColor: '#112fC0 !important',
       },
@@ -115,7 +133,7 @@ textAlign:'center',
 justifyContent:'center',
 alignItems:'center',
 color:'#000000',
-marginTop:'1rem',
+marginBottom:'2.93rem',
 fontSize:'11px',
 [theme.breakpoints.down('sm')]:{
     fontSize:'0.6rem !important',
@@ -141,18 +159,19 @@ logoImg:{
     },
     width:'143px',
     height:'57px',
-    position:'absolute',
-    top:'154.63px',
-    left:'649px',
-    right:'648px',
-    bottom:'811.75px',
+    marginBottom:'1.25rem',
+
 },
 formItem:{
     [theme.breakpoints.down('sm')]:{
         width:'90%',
         display:'grid',
         placeItems:'center',
-    }
+    },
+    width:'74.8%',
+    display:"flex",
+    flexDirection:'column',
+    alignItems:'center',
 },
 lText:{
     fontFamily: 'Montserrat',
@@ -161,14 +180,17 @@ fontWeight: '100',
 fontSize: '13px',
 lineHeight: '16px',
 textAlign:'center',
-marginBottom:'1.7rem',
+marginBottom:'3.678rem',
 
 color: 'rgba(0, 0, 0, 0.5)',
 },
 
 checkContainer:{
     display:'flex',
-    marginTop:'1rem',
+    marginTop:'1.625rem',
+    marginLeft:'5.43rem !important',
+    marginBottom:'2.56rem',
+    width:'74.8%',
     [theme.breakpoints.down('sm')] :{
         marginLeft:'1.5rem',
     }
@@ -192,6 +214,13 @@ textDecoration:'none',
 fpContainer:{
     display:'flex',
     justifyContent:'center',
+    marginBottom:'2.69rem !important'
+},
+loginButton:{
+    width:'100%',
+    height:'auto',
+    display:'flex',
+    justifyContent:"center",
 }
 
 
