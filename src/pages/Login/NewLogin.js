@@ -20,6 +20,7 @@ import {IoMdCheckmark} from 'react-icons/io'
 import {MdVisibilityOff} from 'react-icons/md';
 import {MdVisibility} from 'react-icons/md';
 import {VscKey} from 'react-icons/vsc';
+import { KeyIcon } from 'react-line-awesome' 
 
 const NewLogin = () => {
 
@@ -55,7 +56,7 @@ return (
             <div className={classes.root}>
                 <img src={hubitlogo} alt="hubut logo" className={classes.logoImg} />
                 <div className={classes.loginContainer}>
-                     <div className={classes.loginForm}>
+                     {/* <div className={classes.loginForm}>
                         <p className={classes.loginTitle}> 
                 Welcome back
                         </p>
@@ -75,7 +76,9 @@ return (
           placeholder="Email"
           startAdornment={
             <InputAdornment position="start">
-              <FiUser className={classes.icon} />
+              
+              <i className="far fa-user"></i> 
+
             </InputAdornment>
           }
           endAdornment={
@@ -97,7 +100,8 @@ return (
           placeholder="Password"
           startAdornment={
             <InputAdornment position="start">
-              <VscKey className={classes.icon} />
+              <KeyIcon className={classes.icon} />
+          
             </InputAdornment>
           }
           endAdornment={
@@ -133,7 +137,7 @@ return (
                     <Link to="/forgetpassword" className={classes.fPass}>
                   Forgot password?
                     </Link>
-                    </div> 
+                    </div>  */}
                  
              </div>
         </div>

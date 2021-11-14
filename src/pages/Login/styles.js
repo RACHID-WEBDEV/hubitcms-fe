@@ -7,8 +7,8 @@ export default makeStyles((theme) => ({
   
 
 root:{
-    width:'100%',
-    height:'100vh',
+    width:'1440px',
+    height:'1024px',
     display:'flex',
     flexDirection:'column',
     justifyContent:'center',
@@ -46,8 +46,8 @@ margin: {
 loginContainer : {
     background: 'rgba(196, 196, 196, 0.1)',
 boxShadow: '0px 2px 12px rgba(0, 0, 0, 0.15)',
-    width:'40%',
-    height:'auto',
+    width:'665px',
+    height:'501px',
     [theme.breakpoints.down('sm')]:{
       width:'100%',
       height:'auto',
@@ -55,7 +55,13 @@ boxShadow: '0px 2px 12px rgba(0, 0, 0, 0.15)',
       boxShadow:'none',
     },
     padding:'3rem',
-    marginTop:'2rem !important',
+    // marginTop:'2rem !important',
+    top:'233px',
+    left:'388px',
+    right:'388px',
+    bottom:'290px',
+    position:'absolute'
+
 },
 
 loginForm:{
@@ -134,7 +140,12 @@ logoImg:{
 
     },
     width:'143px',
-    height:'auto',
+    height:'57px',
+    position:'absolute',
+    top:'154.63px',
+    left:'649px',
+    right:'648px',
+    bottom:'811.75px',
 },
 formItem:{
     [theme.breakpoints.down('sm')]:{
