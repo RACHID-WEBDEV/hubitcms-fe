@@ -33,7 +33,7 @@ margin: {
     display:'flex',
     justifyContent:'center',
     alignItems:'center',
-    marginBottom:'3.43rem !important',
+    marginBottom:'1.7rem !important',
 
   },
   margi:{
@@ -102,24 +102,24 @@ loginTitle:{
     fontFamily:'Montserrat, sans-serif !important ',
     fontWeight:'600',
     fontSize:'20px',
-    marginTop:'2.25rem',
+    marginTop:'2rem',
 },
 
 btned:{
     backgroundColor:'#005FC0 !important' ,
     // padding:'0.6rem 6rem !important',
     // margin:'auto !important',
-    marginTop:'2.56rem !important',
+    marginTop:'0.5rem !important',
     display:'block !important',
     color:'#fff !important',
-    fontFamily:'Montserrat, sans-serif',
+    fontFamily:'Montserrat, sans-serif !important',
     width:'15.5rem !important',
     marginBottom:'0.75rem !important',
 
 
     // marginTop:'2rem !important',
     '&:hover':{
-        backgroundColor: '#112fC0 !important',
+        backgroundColor: '#005fc0 !important',
       },
       [theme.breakpoints.down('sm')]:{
           
@@ -133,7 +133,7 @@ textAlign:'center',
 justifyContent:'center',
 alignItems:'center',
 color:'#000000',
-marginBottom:'2.93rem',
+marginBottom:'2rem',
 fontSize:'11px',
 [theme.breakpoints.down('sm')]:{
     fontSize:'0.6rem !important',
@@ -141,12 +141,12 @@ fontSize:'11px',
 },
 terms:{
     textDecoration:'none',
-    color:'#122fc0',
+    color:'#007eff',
 fontSize:'11px',
 
     
     '&:hover':{
-        color:'#122fc0',
+        color:'#007eff',
 
     }
 
@@ -180,7 +180,7 @@ fontWeight: '100',
 fontSize: '13px',
 lineHeight: '16px',
 textAlign:'center',
-marginBottom:'3.678rem',
+marginBottom:'1.7rem',
 
 color: 'rgba(0, 0, 0, 0.5)',
 },
@@ -188,8 +188,9 @@ color: 'rgba(0, 0, 0, 0.5)',
 checkContainer:{
     display:'flex',
     marginTop:'1.625rem',
+    fontSize:'13px !important',
     marginLeft:'5.43rem !important',
-    marginBottom:'2.56rem',
+    marginBottom:'2rem',
     width:'74.8%',
     [theme.breakpoints.down('sm')] :{
         marginLeft:'1.5rem',
@@ -207,7 +208,7 @@ fPass:{
 color:'#007EFF',
 fontFamily: 'Montserrat',
 fontSize:'13px',
-marginTop:'2rem',
+marginTop:'0rem',
 textDecoration:'none',
 
 },
