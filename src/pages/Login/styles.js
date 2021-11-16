@@ -117,6 +117,7 @@ btned:{
     width:'15.5rem !important',
     marginBottom:'0.75rem !important',
     textTransform:'none !important',
+    fontWeight:'bold !important',
     '&:hover':{
         backgroundColor: '#005fc0 !important',
       },

@@ -110,6 +110,7 @@ export default makeStyles((theme) => ({
         color:'#fff !important',
         fontFamily:'Montserrat, sans-serif !important',
         width:'15.5rem !important',
+        fontWeight:'bold !important',
         marginBottom:'0.75rem !important',
         textTransform:'none !important',
         '&:hover':{
