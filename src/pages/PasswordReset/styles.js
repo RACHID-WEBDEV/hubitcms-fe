@@ -49,7 +49,7 @@ export default makeStyles((theme) => ({
       input:{
           width:'100%',
           marginTop:'1rem',
-          fontFamily:'Montserrat, sans-serif',
+          fontFamily:'Montserrat, sans-serif !important',
       },
       mar:{
     width:'100%',
