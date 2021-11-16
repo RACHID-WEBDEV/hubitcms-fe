@@ -44,7 +44,8 @@ margin: {
   },
   icon:{
     color: '#005FC0',
-    fontSize:'1.5rem',
+    fontSize:'1.3rem',
+    marginRight:'1.5rem !important',
   },
   input:{
       width:'100%',
@@ -81,7 +82,7 @@ loginForm:{
     alignItems:'center',
     [theme.breakpoints.down('sm')]:{
           width:'100%',
-          padding:'1rem'
+          
           
     },
 },
@@ -107,17 +108,14 @@ loginTitle:{
 
 btned:{
     backgroundColor:'#005FC0 !important' ,
-    // padding:'0.6rem 6rem !important',
-    // margin:'auto !important',
+    
     marginTop:'0.5rem !important',
     display:'block !important',
     color:'#fff !important',
     fontFamily:'Montserrat, sans-serif !important',
     width:'15.5rem !important',
     marginBottom:'0.75rem !important',
-
-
-    // marginTop:'2rem !important',
+    textTransform:'none !important',
     '&:hover':{
         backgroundColor: '#005fc0 !important',
       },
@@ -143,6 +141,7 @@ terms:{
     textDecoration:'none',
     color:'#007eff',
 fontSize:'11px',
+marginLeft:'0.2rem',
 
     
     '&:hover':{
@@ -176,7 +175,7 @@ formItem:{
 lText:{
     fontFamily: 'Montserrat',
 fontStyle: 'normal',
-fontWeight: '100',
+fontWeight: '400 !important',
 fontSize: '13px',
 lineHeight: '16px',
 textAlign:'center',
@@ -193,7 +192,7 @@ checkContainer:{
     marginBottom:'2rem',
     width:'74.8%',
     [theme.breakpoints.down('sm')] :{
-        marginLeft:'1.5rem',
+        marginLeft:'1.5rem !important',
     }
 },
 checkItem:{

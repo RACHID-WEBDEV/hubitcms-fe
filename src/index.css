@@ -13,11 +13,19 @@ font-family: 'Ubuntu', sans-serif; */
     height: auto;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
+
 
 .icon{
     color: #005FC0;
     font-size: 1.5rem;
+    margin-right: 0.8rem;
+    margin-top: 1.5rem;
+}
+.iconf{
+    color: #005FC0;
+    font-size: 1.3rem;
     margin-right: 0.8rem;
     margin-top: 1.5rem;
 }

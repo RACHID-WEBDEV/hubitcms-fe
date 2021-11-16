@@ -5,13 +5,28 @@ import {Link} from 'react-router-dom'
 import LoginInput from '../../components/Inputs/LoginInput'
 import LoginPasswordInput from '../../components/Inputs/LoginPasswordInput'
 import { userLogin } from '../../services/PostService'
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import FormControl from '@material-ui/core/FormControl';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 import { useHistory } from 'react-router-dom'
 import appContext from '../../contexts/app-context'
-import hubitlogo from '../../assets/hubitlogo.png' ;
+import hubitlogo from '../../assets/hubit.png' ;
+import {FiUser} from 'react-icons/fi'
+import {IoMdCheckmark} from 'react-icons/io'
+import {MdVisibilityOff} from 'react-icons/md';
+import {MdVisibility} from 'react-icons/md';
+import {VscKey} from 'react-icons/vsc';
+import { KeyIcon } from 'react-line-awesome' 
 
 const Login = () => {
 
     const {loginValues,setLogin} = useContext(appContext);
+    const [text, setText] = useState(false);
+
     const history = useHistory();
 
     useEffect(() => {
@@ -35,36 +50,91 @@ const classes = useStyles();
     
 return (
         <>
+        <div className="desktop">
+
             <div className={classes.root}>
                 <img src={hubitlogo} alt="hubut logo" className={classes.logoImg} />
                 <div className={classes.loginContainer}>
-                    <div className={classes.loginForm}>
-                        <Typography variant="h4" className={classes.loginTitle}>
-                            Welcome Back
-                        </Typography>
-                        <Typography variant="body1" className={classes.subtitle}>
-                        Please Log in to your account to continue
-                        </Typography>
+                     <div className={classes.loginForm}>
+                        <p className={classes.loginTitle}> 
+                Welcome Back
+                        </p>
+                              
+                    <p className={classes.lText}> 
+                    Please Log in to your account to continue
+                      </p>
                 <div className={classes.formItem}>
+                <div className={classes.margin}>
+                <i className="far fa-user iconf"></i> 
 
-             <LoginInput placeholder="Email" name="email" label="" type="email" ErrorMessage="" className={classes.email} />
-                </div>
-                <div>
+                <FormControl className={classes.mar}>
+                  
+        <Input
+          id="input-with-icon-adornment"
+          className={classes.input}
+          placeholder="Email"
+       
+          endAdornment={
+            <InputAdornment position="end">
+            
+                 <IoMdCheckmark className={classes.icon} /> 
+              
+            </InputAdornment>
+          }
+        />
 
-             <LoginPasswordInput placeholder="Password" name="password"  />
-             </div>
+      </FormControl>
+      </div>
+            <div className={classes.margi}>
+            <KeyIcon className="icon" />
+
+                <FormControl className={classes.mar}>
+        
+        <Input
+          id="input-with-icon-adornment"
+          className={classes.input}
+          type="password"
+          placeholder="Password"
+     
+          endAdornment={
+            <InputAdornment position="end">
+            
+                 <MdVisibility className={classes.icon} /> 
+              
+            </InputAdornment>
+          }
+        />
+      </FormControl>
+      </div>
+
                 </div>
-                <div className={classes.loginButton}>
+                </div> 
+                
+                 <div className={classes.checkContainer}>
+                  <input type="checkbox" className={classes.checkItem} />
+                  <p>
+                Remember me
+
+                  </p>
+                </div> 
+                 <div className={classes.loginButton}>
                     <Button   onClick={handleLogin} className={classes.btned}>
-                        Login
+                        Log In
                     </Button>
-                    </div>
-                    <div className={classes.termsContainer}>
-                        By continuing you agree to our  <Typography className={classes.terms} component={Link} to="/terms">
+                    </div> 
+                     <div className={classes.termsContainer}>
+                        By continuing you agree to our  <Link className={classes.terms}  to="terms">
                             Terms and Condition
-                        </Typography>
-                    </div>
+                        </Link>
+                    </div> 
+                   <div className={classes.fpContainer}>
+                    <Link to="/forgetpassword" className={classes.fPass}>
+                  Forgot password?
+                    </Link>
+                    </div> 
+                 
              </div>
+        </div>
         </div>
         </>
     )

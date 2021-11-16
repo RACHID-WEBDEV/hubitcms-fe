@@ -1,17 +1,13 @@
 import React from 'react'
 
 import { BrowserRouter as Router, Switch, Route   } from 'react-router-dom'
-
-
-import Login from './pages/Login/Login'
-
 import AppState from './contexts/AppState';
-
-
 import PageError from './pages/Error/PageError';
 import LandingPage from './pages/LandingPage/LandingPage';
 import Dashboard from './pages/DashboardPage/Dashboard';
-import NewLogin from './pages/Login/NewLogin';
+import Login from './pages/Login/Login';
+import ResetPassword from './pages/PasswordReset/PasswordReset'
+import EmailSent from './pages/PasswordReset/EmailSent'
 
 
 const App = () => {
@@ -22,15 +18,11 @@ const App = () => {
                
       <Switch>
          <Route exact path="/landing" component={LandingPage} />
-         <Route exact path="/" component={NewLogin} />
-    
-        
-      
-        <Route exact path="/login" component={Login} />
+         <Route exact path="/" component={Login} />
+         <Route exact path="/forgetpassword" component={ResetPassword} />
+         <Route exact path="/emailsent" component={EmailSent} />
         <Route exact path="/dashboard" component={Dashboard} />
-     
       <Route exact path="*"  component={PageError} />
-
       </Switch>
       </Router>
     </AppState>
