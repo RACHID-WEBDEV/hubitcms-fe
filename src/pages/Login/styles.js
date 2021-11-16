@@ -104,7 +104,7 @@ loginTitle:{
     fontWeight:'600',
     fontSize:'20px',
     marginTop:'2rem',
-    color:'rgba(0,0,0,0.1)',
+    color:'rgba(0,0,0,1)',
 },
 
 btned:{
