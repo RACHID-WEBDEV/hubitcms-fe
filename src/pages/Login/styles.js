@@ -104,6 +104,7 @@ loginTitle:{
     fontWeight:'600',
     fontSize:'20px',
     marginTop:'2rem',
+    color:'rgba(0,0,0,0.1)',
 },
 
 btned:{
@@ -175,7 +176,8 @@ formItem:{
 lText:{
     fontFamily: 'Montserrat',
 fontStyle: 'normal',
-fontWeight: '400 !important',
+fontWeight: '100 !important',
+opacity: '1',
 fontSize: '13px',
 lineHeight: '16px',
 textAlign:'center',
