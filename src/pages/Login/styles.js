@@ -44,7 +44,7 @@ margin: {
   },
   icon:{
     color: '#005FC0',
-    fontSize:'1.3rem',
+    fontSize:'1rem',
     marginRight:'1.5rem !important',
   },
   input:{
