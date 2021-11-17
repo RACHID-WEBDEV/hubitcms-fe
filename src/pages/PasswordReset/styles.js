@@ -45,6 +45,7 @@ export default makeStyles((theme) => ({
         color: '#005FC0',
         fontSize:'1.3rem',
         marginRight:'1.5rem !important',
+        cursor:'pointer',
       },
       input:{
           width:'100%',
@@ -61,6 +62,7 @@ export default makeStyles((theme) => ({
         background: 'rgba(196, 196, 196, 0.1)',
     boxShadow: '0px 2px 12px rgba(0, 0, 0, 0.15)',
         width:'46.8%',
+        minHeight:'55%',
         // height:'48.92%',
         height:'auto',
         [theme.breakpoints.down('sm')]:{
@@ -102,11 +104,13 @@ export default makeStyles((theme) => ({
 
     },
     
+    
     btned:{
         backgroundColor:'#005FC0 !important' ,
         
         marginTop:'0.5rem !important',
-        display:'block !important',
+        display:'flex !important',
+        justifyContent:'center',
         color:'#fff !important',
         fontFamily:'Montserrat, sans-serif !important',
         width:'15.5rem !important',
@@ -233,10 +237,22 @@ export default makeStyles((theme) => ({
         textAlign:'center',
         marginBottom:'1rem',
     },
+    errorP: {
+        color: 'rgba(201, 30, 30, 0.7)',
+        fontSize:'13px',
+        fontWeight:'400',
+        textAlign:'center',
+        marginBottom:'1rem',
+        marginTop:'1rem',
+    },
     emailSentImg:{
         width:"70%",
         height:'auto',
         paddingBottom:'2rem'
+    },
+    extraSpace:{
+        padding:'2rem 0',
+
     },
     
     

@@ -1,25 +1,22 @@
 import React,{useState,useEffect,useContext} from 'react'
 import useStyles from './styles'
-import {Typography, Button} from '@material-ui/core'
+import {Button} from '@material-ui/core'
 import {Link} from 'react-router-dom' 
-import LoginInput from '../../components/Inputs/LoginInput'
-import LoginPasswordInput from '../../components/Inputs/LoginPasswordInput'
+
 import { userLogin } from '../../services/PostService'
 import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
+
 import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControl from '@material-ui/core/FormControl';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
-import AccountCircle from '@material-ui/icons/AccountCircle';
+
 import { useHistory } from 'react-router-dom'
 import appContext from '../../contexts/app-context'
 import hubitlogo from '../../assets/hubit.png' ;
-import {FiUser} from 'react-icons/fi'
+
 import {IoMdCheckmark} from 'react-icons/io'
 import {MdVisibilityOff} from 'react-icons/md';
 import {MdVisibility} from 'react-icons/md';
-import {VscKey} from 'react-icons/vsc';
+
 import { KeyIcon } from 'react-line-awesome' 
 
 const Login = () => {

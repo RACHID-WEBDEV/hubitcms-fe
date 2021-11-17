@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import mbackground from '../../assets/mbackground.png' 
+
 
 
 
@@ -34,6 +34,7 @@ margin: {
     justifyContent:'center',
     alignItems:'center',
     marginBottom:'1.7rem !important',
+   
 
   },
   margi:{
@@ -51,6 +52,21 @@ margin: {
       width:'100%',
       marginTop:'1rem',
       fontFamily:'Montserrat, sans-serif !important',
+      '&:focus':{     
+        outline:'none',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.42)'
+    },
+    '&:hover':{
+        
+        borderBottom: '1px solid rgba(0, 0, 0, 0.42)',
+    },
+    '&:before':{
+        
+        borderBottom: '1px solid rgba(0, 0, 0, 0.42)',
+    },
+    '&:after': {
+        borderBottom: '1px solid rgba(0, 0, 0, 0.42)',
+    }
   },
   mar:{
 width:'100%',
