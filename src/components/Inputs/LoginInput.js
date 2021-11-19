@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
         outlineStyle:'none',
 
 
+
       },
       formItem:{
         width:'100%',
@@ -43,7 +44,10 @@ const useStyles = makeStyles((theme) => ({
         borderRadius:'5px',
         display:'grid',
         placeItems:'center',
-
+        [theme.breakpoints.down('sm')]:{
+          width:'100%',
+        },
+          
       },
       error:{
           textAlign:'left',
@@ -52,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
       },
       inputbase:{
           marginBottom:'1rem',
+          width:'100%',
       },
 
   

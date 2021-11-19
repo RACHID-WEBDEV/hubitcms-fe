@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(3),
     },
     textField: {
-      width: '25ch',
+      width: '100%',
     },
     password:{
         width:'100%',
@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
         height:'auto',
         marginBottom:'1rem',
         paddingRight:'1rem',
+        [theme.breakpoints.down('sm')]:{
+          paddingRight:'0',
+        },
         
         border:'none',
 
@@ -62,6 +65,8 @@ const LoginPasswordInput  = ({name,placeholder,size})=> {
           <FormControl  variant="filled" className={classes.password}>
           <InputLabel htmlFor="filled-adornment-password">{placeholder}</InputLabel>
           <FilledInput className={classes.passwording}
+          fullWidth={true} 
+          autoFocus={false}
             id="filled-adornment-password"
             disableUnderline={true}
             type={loginValues.showPassword ? 'text' : 'password'}
