@@ -16,32 +16,68 @@ import hubitlogo from '../../assets/hubit.png' ;
 import {IoMdCheckmark} from 'react-icons/io'
 import {MdVisibilityOff} from 'react-icons/md';
 import {MdVisibility} from 'react-icons/md';
+import {MdLock }  from 'react-icons/md';
+import { CircularProgress } from '@material-ui/core'
+
 
 import { KeyIcon } from 'react-line-awesome' 
 
 const Login = () => {
 
     const {loginValues,setLogin} = useContext(appContext);
-    const [text, setText] = useState(false);
+    const [text, setText] = useState(true);
+    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
+    const [showError, setShowError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+    const [loading, setLoading] = useState(false);
+
+
+
+
 
     const history = useHistory();
 
     useEffect(() => {
         window.scroll(0,0)
 }, [])
+const changeType = () => {
+  setText(!text);
+}
+const handlePChange = (e) => {
+  setPassword(e.target.value);
+}
+const handleEChange = (e) => {
+  setEmail(e.target.value);
+} 
+
 const handleLogin = async (e) => {  //login function    
     e.preventDefault();
-    const {email,password} = loginValues;   //get values from context
+       //get values from context
+       setLoading(true);
     const item = {"email":email,"password":password};
     const response = await userLogin(item); 
     if(response.data.error === false){
+      setLoading(false);
         localStorage.setItem('token',response.data.response);
+        
         history.push('/dashboard'); //redirect to dashboard page if login is successful 
-    } else { 
-        alert('Invalid email or password');
+     
+        setShowError(false);
+        setErrorMessage('');
+
+      } else { 
+        // alert('Invalid email or password');
+        setLoading(false);
+        setShowError(true);
+        setErrorMessage(response.data.message);
     }   //if login is unsuccessful, alert user with error message 
 
 }       
+setTimeout(() => {
+    setShowError(false);
+}, 3000);
+
 const classes = useStyles();
 
     
@@ -53,6 +89,9 @@ return (
                 <img src={hubitlogo} alt="hubut logo" className={classes.logoImg} />
                 <div className={classes.loginContainer}>
                      <div className={classes.loginForm}>
+                     <div className={classes.errorP}>
+                {showError ? 'Password do not match' : ''}  
+                </div> 
                         <p className={classes.loginTitle}> 
                 Welcome Back
                         </p>
@@ -70,33 +109,32 @@ return (
           id="input-with-icon-adornment"
           className={classes.input}
           placeholder="Email"
+          value={email}
+          onChange={handleEChange}
+
        
-          endAdornment={
-            <InputAdornment position="end">
-            
-                 <IoMdCheckmark className={classes.icon} /> 
-              
-            </InputAdornment>
-          }
+        
         />
 
       </FormControl>
       </div>
             <div className={classes.margi}>
-            <KeyIcon className="icon" />
+            <MdLock className="icon" />
 
                 <FormControl className={classes.mar}>
         
         <Input
           id="input-with-icon-adornment"
           className={classes.input}
-          type="password"
+          type={text ? "password" : "text"}
           placeholder="Password"
-     
+          value={password}
+          onChange={handlePChange}
+
           endAdornment={
             <InputAdornment position="end">
             
-                 <MdVisibility className={classes.icon} /> 
+            {text ? <MdVisibility onClick={changeType} className={classes.icon} /> : <MdVisibilityOff onClick={changeType} className={classes.icon} />}
               
             </InputAdornment>
           }
@@ -116,7 +154,7 @@ return (
                 </div> 
                  <div className={classes.loginButton}>
                     <Button   onClick={handleLogin} className={classes.btned}>
-                        Log In
+                      {loading ? <CircularProgress className={classes.whiteSpinner} /> : "Log In" }  
                     </Button>
                     </div> 
                      <div className={classes.termsContainer}>

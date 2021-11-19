@@ -37,6 +37,14 @@ margin: {
    
 
   },
+  errorP: {
+    color: 'rgba(201, 30, 30, 0.7)',
+    fontSize:'13px',
+    fontWeight:'400',
+    textAlign:'center',
+    marginBottom:'1rem',
+    marginTop:'1rem',
+},
   margi:{
     width:'100%',
     display:'flex',
@@ -240,7 +248,15 @@ loginButton:{
     height:'auto',
     display:'flex',
     justifyContent:"center",
-}
+},
+whiteSpinner:{
+    color:'#fff',
+    marginLeft:'0.5rem',
+    marginTop:'0.5rem',
+    height:'inherit',
+    width:'inherit',
+},
+
 
 
 

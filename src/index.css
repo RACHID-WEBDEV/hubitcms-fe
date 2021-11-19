@@ -29,3 +29,50 @@ font-family: 'Ubuntu', sans-serif; */
     margin-right: 0.8rem;
     margin-top: 1.5rem;
 }
+.MuiInputBase-input{
+    border-bottom: #474747 solid 1px;
+}
+.MuiInputBase-input::placeholder{
+    color: #474747;
+    font-size: 1rem;
+
+    font-family: 'Montserrat', sans-serif;}
+.MuiInputBase-input::placeholder:hover{
+    color: #474747;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+} 
+.MuiInputBase-input::placeholder:focus{
+    color: #474747;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+} 
+.MuiInputBase-input::placeholder:active{
+    color: #474747;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.MuiInputBase-input:focus{
+    border-bottom: #474747 solid 1px;
+}
+.MuiInputBase-input:hover{
+    border-bottom: #474747 solid 1px;
+}
+.MuiInputBase-input:active{
+    border-bottom: #474747 solid 1px;
+}   
+.MuiInputBase-input:focus + .MuiInputBase-inputUnderline:after{
+    border-bottom: #474747 solid 1px;
+}
+.MuiInputBase-input:hover + .MuiInputBase-inputUnderline:after{
+    border-bottom: #474747 solid 1px;
+}
+.MuiInputBase-input:active + .MuiInputBase-inputUnderline:after{
+    border-bottom: #474747 solid 1px;
+}
+.MuiInputBase-inputUnderline:after{
+    border-bottom: #474747 solid 1px;
+}
+.MuiInputBase-inputUnderline:after{
+    border-bottom: #474747 solid 1px;
+}
