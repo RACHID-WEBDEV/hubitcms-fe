@@ -250,11 +250,11 @@ loginButton:{
     justifyContent:"center",
 },
 whiteSpinner:{
-    color:'#fff',
+    color:'#fff !important',
     marginLeft:'0.5rem',
     marginTop:'0.5rem',
-    height:'inherit',
-    width:'inherit',
+    height:'inherit !important',
+    width:'inherit !important',
 },
 
 
