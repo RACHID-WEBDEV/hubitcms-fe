@@ -253,8 +253,7 @@ whiteSpinner:{
     color:'#fff !important',
     marginLeft:'0.5rem',
     marginTop:'0.5rem',
-    height:'inherit !important',
-    width:'inherit !important',
+   
 },
 
 
