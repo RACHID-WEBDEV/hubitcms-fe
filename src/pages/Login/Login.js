@@ -68,15 +68,16 @@ const handleLogin = async (e) => {  //login function
 
       } else { 
         // alert('Invalid email or password');
+        
         setLoading(false);
-        setShowError(true);
         setErrorMessage(response.data.message);
+        setShowError(true);
     }   //if login is unsuccessful, alert user with error message 
 
 }       
 setTimeout(() => {
     setShowError(false);
-}, 3000);
+}, 10000);
 
 const classes = useStyles();
 
@@ -89,9 +90,7 @@ return (
                 <img src={hubitlogo} alt="hubut logo" className={classes.logoImg} />
                 <div className={classes.loginContainer}>
                      <div className={classes.loginForm}>
-                     <div className={classes.errorP}>
-                {showError ? 'Password do not match' : ''}  
-                </div> 
+                   
                         <p className={classes.loginTitle}> 
                 Welcome Back
                         </p>
@@ -100,6 +99,9 @@ return (
                     Please Log in to your account to continue
                       </p>
                 <div className={classes.formItem}>
+                <div className={classes.errorP}>
+                {showError ? `${errorMessage}` : ''}  
+                </div> 
                 <div className={classes.margin}>
                 <i className="far fa-user iconf"></i> 
 
@@ -153,8 +155,11 @@ return (
                   </p>
                 </div> 
                  <div className={classes.loginButton}>
-                    <Button   onClick={handleLogin} className={classes.btned}>
-                      {loading ? <CircularProgress className={classes.whiteSpinner} /> : "Log In" }  
+                    <Button   onClick={handleLogin} className={classes.btned} 
+                    disabled={loading ? true : false}
+                    >
+                      {/* {loading ? <CircularProgress className={classes.whiteSpinner} /> : "Log In" }   */}
+                      Log In
                     </Button>
                     </div> 
                      <div className={classes.termsContainer}>

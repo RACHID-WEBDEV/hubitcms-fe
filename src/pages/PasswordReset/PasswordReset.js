@@ -3,7 +3,7 @@ import useStyles from './styles'
 import { Button} from '@material-ui/core'
 import {Link} from 'react-router-dom' 
 
-import { userLogin } from '../../services/PostService'
+import { userForgotPassword } from '../../services/PostService'
 import Input from '@material-ui/core/Input';
 
 import InputAdornment from '@material-ui/core/InputAdornment';
@@ -17,24 +17,29 @@ import {IoMdCheckmark} from 'react-icons/io'
 
 
 const PasswordReset = () => {
-    const {loginValues,setLogin} = useContext(appContext);
-    // const [text, setText] = useState(false);
+
+    const [email, setEmail] = useState('');
+    const [showError, setShowError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const history = useHistory();
 
     useEffect(() => {
         window.scroll(0,0)
 }, [])
-const handleLogin = async (e) => {  //login function    
+const handleReset = async (e) => {  //login function    
     e.preventDefault();
-    const {email,password} = loginValues;   //get values from context
-    const item = {"email":email,"password":password};
-    const response = await userLogin(item); 
+       //get values from context
+         const item = {"email":email};
+    const response = await userForgotPassword(item); 
+    console.log(response)
     if(response.data.error === false){
-        localStorage.setItem('token',response.data.response);
-        history.push('/dashboard'); //redirect to dashboard page if login is successful 
+        
+        history.push('/emailsent'); //redirect to dashboard page if login is successful 
     } else { 
-        alert('Invalid email or password');
+        setShowError(true);
+        setErrorMessage(response.data.message);
+
     }   //if login is unsuccessful, alert user with error message 
 
 }       
@@ -57,6 +62,9 @@ return (
                 Enter your registered email below to receive password reset instructions
                   </p>
             <div className={classes.formItem}>
+            <div className={classes.errorMsg}>
+                {showError ? `${errorMessage}` : ''}  
+                </div> 
             <div className={classes.margin}>
             <i className="far fa-user iconf"></i> 
 
@@ -66,14 +74,8 @@ return (
       id="input-with-icon-adornment"
       className={classes.input}
       placeholder="Email"
-   
-      endAdornment={
-        <InputAdornment position="end">
-        
-             <IoMdCheckmark className={classes.icon} /> 
-          
-        </InputAdornment>
-      }
+        onChange={(e) => setEmail(e.target.value)}
+        value={email}
     />
 
   </FormControl>
@@ -82,12 +84,10 @@ return (
 
             </div>
             </div> 
-            <div className={classes.errorMsg}>
-                  Email does'nt Exist in our record
-                </div> 
+          
           
              <div className={classes.loginButton}>
-                <Button   onClick={handleLogin} className={classes.btned}>
+                <Button   onClick={handleReset} className={classes.btned}>
                     Continue
                 </Button>
                 </div> 

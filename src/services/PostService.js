@@ -4,7 +4,9 @@
         return axiosInstance.post('utility/admin-login', post)
     }
     
-  
+    export const userForgotPassword = (post) => {
+        return axiosInstance.post('utility/forgot-password', post)
+    }
     
     export const getPosts = () => {
         return axiosInstance.get('/api/posts')
