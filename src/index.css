@@ -76,3 +76,56 @@ font-family: 'Ubuntu', sans-serif; */
 .MuiInputBase-inputUnderline:after{
     border-bottom: #474747 solid 1px;
 }
+.loader {
+    position: relative;
+  }
+  
+  .outer,
+  .middle,
+  .inner {
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    border-right-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .outer {
+    width: 3.5em;
+    height: 3.5em;
+    margin-left: -1.75em;
+    margin-top: -1.75em;
+    animation: spin 2s linear infinite;
+  }
+  
+  .middle {
+    width: 2.1em;
+    height: 2.1em;
+    margin-left: -1.05em;
+    margin-top: -1.05em;
+    animation: spin 1.75s linear reverse infinite;
+  }
+  
+  .inner {
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: -0.4em;
+    margin-top: -0.4em;
+    animation: spin 1.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .MuiInputBase-input::placeholder{
+    color: #474747;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif; 
+    margin-bottom: -0.5rem;
+    padding-bottom: 0;
+  }
+  

@@ -2,28 +2,22 @@ import React,{useState,useEffect,useContext} from 'react'
 import useStyles from './styles'
 import {Button} from '@material-ui/core'
 import {Link} from 'react-router-dom' 
-
 import { userLogin } from '../../services/PostService'
 import Input from '@material-ui/core/Input';
-
 import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControl from '@material-ui/core/FormControl';
-
 import { useHistory } from 'react-router-dom'
 import appContext from '../../contexts/app-context'
 import hubitlogo from '../../assets/hubit.png' ;
-
-import {IoMdCheckmark} from 'react-icons/io'
 import {MdVisibilityOff} from 'react-icons/md';
 import {MdVisibility} from 'react-icons/md';
-import {MdLock }  from 'react-icons/md';
-import { CircularProgress } from '@material-ui/core'
+
+import { Icon, InlineIcon } from '@iconify/react';
 
 
-import { KeyIcon } from 'react-line-awesome' 
+
 
 const Login = () => {
-
     const {loginValues,setLogin} = useContext(appContext);
     const [text, setText] = useState(true);
     const [password, setPassword] = useState('');
@@ -31,16 +25,14 @@ const Login = () => {
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
-
-
-
+    
 
 
     const history = useHistory();
-
     useEffect(() => {
         window.scroll(0,0)
 }, [])
+
 const changeType = () => {
   setText(!text);
 }
@@ -51,36 +43,33 @@ const handleEChange = (e) => {
   setEmail(e.target.value);
 } 
 
-const handleLogin = async (e) => {  //login function    
+
+
+const handleLogin = async (e) => {  
     e.preventDefault();
-       //get values from context
        setLoading(true);
     const item = {"email":email,"password":password};
     const response = await userLogin(item); 
     if(response.data.error === false){
       setLoading(false);
         localStorage.setItem('token',response.data.response);
-        
-        history.push('/dashboard'); //redirect to dashboard page if login is successful 
-     
+        history.push('/dashboard'); 
         setShowError(false);
         setErrorMessage('');
 
       } else { 
-        // alert('Invalid email or password');
         setLoading(false);
-        setShowError(true);
         setErrorMessage(response.data.message);
-    }   //if login is unsuccessful, alert user with error message 
-
+        setShowError(true);
+    }   
 }       
 setTimeout(() => {
     setShowError(false);
-}, 3000);
-
+}, 10000);
+setTimeout(() => {
+  setLoading(false);
+}, 15000);
 const classes = useStyles();
-
-    
 return (
         <>
         <div className="desktop">
@@ -89,9 +78,7 @@ return (
                 <img src={hubitlogo} alt="hubut logo" className={classes.logoImg} />
                 <div className={classes.loginContainer}>
                      <div className={classes.loginForm}>
-                     <div className={classes.errorP}>
-                {showError ? 'Password do not match' : ''}  
-                </div> 
+                   
                         <p className={classes.loginTitle}> 
                 Welcome Back
                         </p>
@@ -100,8 +87,11 @@ return (
                     Please Log in to your account to continue
                       </p>
                 <div className={classes.formItem}>
+                <div className={classes.errorP}>
+                {showError ? `${errorMessage}` : ''}  
+                </div> 
                 <div className={classes.margin}>
-                <i className="far fa-user iconf"></i> 
+                <Icon icon="raphael:user" className={classes.icon} />
 
                 <FormControl className={classes.mar}>
                   
@@ -111,18 +101,13 @@ return (
           placeholder="Email"
           value={email}
           onChange={handleEChange}
-
-       
-        
         />
 
       </FormControl>
       </div>
             <div className={classes.margi}>
-            <MdLock className="icon" />
-
+            <Icon icon="gridicons:lock" className={classes.icon} />
                 <FormControl className={classes.mar}>
-        
         <Input
           id="input-with-icon-adornment"
           className={classes.input}
@@ -134,7 +119,7 @@ return (
           endAdornment={
             <InputAdornment position="end">
             
-            {text ? <MdVisibility onClick={changeType} className={classes.icon} /> : <MdVisibilityOff onClick={changeType} className={classes.icon} />}
+            {text ? <Icon icon="fa-solid:eye" onClick={changeType} className={classes.iconRight} /> : <Icon icon="fa-solid:eye-slash" onClick={changeType} className={classes.iconRight} />}
               
             </InputAdornment>
           }
@@ -147,14 +132,14 @@ return (
                 
                  <div className={classes.checkContainer}>
                   <input type="checkbox" className={classes.checkItem} />
-                  <p>
-                Remember me
-
-                  </p>
+                  <p>Remember me </p>
                 </div> 
                  <div className={classes.loginButton}>
-                    <Button   onClick={handleLogin} className={classes.btned}>
-                      {loading ? <CircularProgress className={classes.whiteSpinner} /> : "Log In" }  
+                    <Button   onClick={handleLogin} className={classes.btned} 
+                    disabled={loading ? true : false}
+                    >
+                    {loading ? 'Loading...' : 'Log In'}
+                      
                     </Button>
                     </div> 
                      <div className={classes.termsContainer}>

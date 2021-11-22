@@ -8,9 +8,9 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControl from '@material-ui/core/FormControl';
 import { useParams,useLocation, useHistory } from 'react-router'
 import hubitlogo from '../../assets/hubit.png' ;
-import {MdVisibilityOff} from 'react-icons/md';
-import {MdVisibility} from 'react-icons/md';
-import { KeyIcon } from 'react-line-awesome' 
+
+import { Icon, InlineIcon } from '@iconify/react';
+
 
 
 const NewPassword = () => {
@@ -60,7 +60,9 @@ const checkPassword = (pass1, pass2) => {
             })
         }
     }
-  
+    setTimeout(() => {
+        setShowError(false);
+    }, 70000);
 const classes = useStyles();
 
     
@@ -82,7 +84,7 @@ return (
                 <div className={classes.formItem}>
         
             <div className={classes.margin}>
-            <KeyIcon className="icon" />
+            <Icon icon="gridicons:lock" className={classes.iconL} />
 
                 <FormControl className={classes.margin}>
         
@@ -96,7 +98,7 @@ return (
      
           endAdornment={
             <InputAdornment position="end">
-            {text ? <MdVisibility onClick={changeType} className={classes.icon} /> : <MdVisibilityOff onClick={changeType} className={classes.icon} />}
+            {text ? <Icon icon="fa-solid:eye" onClick={changeType} className={classes.iconRight} /> : <Icon icon="fa-solid:eye-slash" onClick={changeType} className={classes.iconRight} />}
                 
               
             </InputAdornment>
@@ -105,7 +107,8 @@ return (
       </FormControl>
       </div>
             <div className={classes.margi}>
-            <KeyIcon className="icon" />
+            <Icon icon="gridicons:lock" className={classes.icon} />
+            
 
                 <FormControl className={classes.mar}>
         
@@ -121,7 +124,7 @@ return (
           endAdornment={
             <InputAdornment position="end">
             
-            {pshow ? <MdVisibility onClick={changePType} className={classes.icon} /> : <MdVisibilityOff onClick={changePType} className={classes.icon} />}
+            {pshow ? <Icon icon="fa-solid:eye" onClick={changePType} className={classes.iconRight} /> : <Icon icon="fa-solid:eye-slash" onClick={changePType} className={classes.iconRight} />}
               
             </InputAdornment>
           }
