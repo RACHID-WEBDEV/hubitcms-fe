@@ -74,13 +74,29 @@ margin: {
     },
     '&:after': {
         borderBottom: '1px solid rgba(0, 0, 0, 0.42)',
-    }
+    },
+    '&::placeholder': {
+        // color: 'rgba(0, 0, 0, 0.42)',
+        
+        fontSize:'6px !important',
+        
+        
+    },
+
   },
+
+  iconRight:{
+cursor:'pointer !important',
+  },
+
+
+
   mar:{
 width:'100%',
 height:'inherit'
   },
 
+  
 
 loginContainer : {
     background: 'rgba(196, 196, 196, 0.1)',
@@ -255,6 +271,12 @@ whiteSpinner:{
     marginTop:'0.5rem',
    
 },
+icon :{
+    color:'#b7b7b7 !important',
+    marginTop:'1.5rem !important',
+    marginRight:'0.5rem !important',
+    fontSize:'1.5rem !important',
+}
 
 
 

@@ -27,11 +27,11 @@ return (
             <div className={classes.loginContainer}>
                  <div className={classes.loginForm}>
                     <p className={classes.loginTitle}> 
-                        Password Updated Successfully
+                        Password Updated!
                     </p>
                           
                 <p className={classes.lText}> 
-                Your password has been successfully been updated , you can now proceed to Login
+                Your password has  successfully been updated, you can now proceed to Login
                   </p>
        
             </div> 

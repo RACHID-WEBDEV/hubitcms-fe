@@ -241,9 +241,10 @@ export default makeStyles((theme) => ({
         color: 'rgba(201, 30, 30, 0.7)',
         fontSize:'13px',
         fontWeight:'400',
-        textAlign:'center',
+        textAlign:'left',
         marginBottom:'1rem',
         marginTop:'1rem',
+        marginLeft:'7rem',
     },
     emailSentImg:{
         width:"70%",
@@ -254,7 +255,21 @@ export default makeStyles((theme) => ({
         padding:'2rem 0',
 
     },
-    
+    icon :{
+        color:'#b7b7b7 !important',
+        marginTop:'1rem !important',
+        marginRight:'0.5rem !important',
+        fontSize:'1.5rem !important',
+    },
+    iconL :{
+        color:'#b7b7b7 !important',
+        marginTop:'0 !important',
+        marginRight:'0.5rem !important',
+        fontSize:'1.5rem !important',
+    },
+    iconRight:{
+        cursor:'pointer !important',
+          },
     
 
 

@@ -13,7 +13,8 @@ import { useHistory } from 'react-router-dom'
 import appContext from '../../contexts/app-context'
 import hubitlogo from '../../assets/hubit.png' ;
 
-import {IoMdCheckmark} from 'react-icons/io'
+import { Icon, InlineIcon } from '@iconify/react';
+
 
 
 const PasswordReset = () => {
@@ -66,7 +67,8 @@ return (
                 {showError ? `${errorMessage}` : ''}  
                 </div> 
             <div className={classes.margin}>
-            <i className="far fa-user iconf"></i> 
+            <Icon icon="raphael:user" className={classes.icon} />
+            
 
             <FormControl className={classes.mar}>
               
