@@ -78,6 +78,9 @@ const handleLogin = async (e) => {  //login function
 setTimeout(() => {
     setShowError(false);
 }, 10000);
+setTimeout(() => {
+  setLoading(false);
+}, 15000);
 
 const classes = useStyles();
 
