@@ -24,7 +24,11 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    // const [loading, setLoading] = useState(false);
     const [loading, setLoading] = useState(false);
+
+  
+
     
 
 
@@ -63,9 +67,9 @@ const handleLogin = async (e) => {
         setShowError(true);
     }   
 }       
-setTimeout(() => {
-    setShowError(false);
-}, 10000);
+// setTimeout(() => {
+//     setShowError(false);
+// }, 10000);
 setTimeout(() => {
   setLoading(false);
 }, 15000);
@@ -119,7 +123,7 @@ return (
           endAdornment={
             <InputAdornment position="end">
             
-            {text ? <Icon icon="fa-solid:eye" onClick={changeType} className={classes.iconRight} /> : <Icon icon="fa-solid:eye-slash" onClick={changeType} className={classes.iconRight} />}
+            {text ? <Icon icon="fa-solid:eye-slash" onClick={changeType} className={classes.iconRight} /> : <Icon icon="fa-solid:eye" onClick={changeType} className={classes.iconRight} />}
               
             </InputAdornment>
           }
