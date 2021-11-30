@@ -60,9 +60,9 @@ const checkPassword = (pass1, pass2) => {
             })
         }
     }
-    setTimeout(() => {
-        setShowError(false);
-    }, 70000);
+    // setTimeout(() => {
+    //     setShowError(false);
+    // }, 70000);
 const classes = useStyles();
 
     
@@ -98,7 +98,7 @@ return (
      
           endAdornment={
             <InputAdornment position="end">
-            {text ? <Icon icon="fa-solid:eye" onClick={changeType} className={classes.iconRight} /> : <Icon icon="fa-solid:eye-slash" onClick={changeType} className={classes.iconRight} />}
+            {text ? <Icon icon="fa-solid:eye-slash" onClick={changeType} className={classes.iconRight} /> : <Icon icon="fa-solid:eye" onClick={changeType} className={classes.iconRight} />}
                 
               
             </InputAdornment>
@@ -124,7 +124,7 @@ return (
           endAdornment={
             <InputAdornment position="end">
             
-            {pshow ? <Icon icon="fa-solid:eye" onClick={changePType} className={classes.iconRight} /> : <Icon icon="fa-solid:eye-slash" onClick={changePType} className={classes.iconRight} />}
+            {pshow ? <Icon icon="fa-solid:eye-slash" onClick={changePType} className={classes.iconRight} /> : <Icon icon="fa-solid:eye" onClick={changePType} className={classes.iconRight} />}
               
             </InputAdornment>
           }

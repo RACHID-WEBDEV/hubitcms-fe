@@ -222,7 +222,7 @@ opacity: '1',
 fontSize: '13px',
 lineHeight: '16px',
 textAlign:'center',
-marginBottom:'1.7rem',
+marginBottom:'0rem',
 
 color: 'rgba(0, 0, 0, 0.5)',
 },

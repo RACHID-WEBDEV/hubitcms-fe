@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+
+
 const axiosInstance = axios.create({
     baseURL: 'https://hubitcms.herokuapp.com/smart-cms/api/1.0/',
     timeout: 10000,
